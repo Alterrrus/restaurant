@@ -1995,3 +1995,591 @@ ns         %     Task name
 
 2020-08-11 22:33:13,798 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-08-11 22:33:13,829 INFO  org.ehcache.core.EhcacheManager.removeCache:216 - Cache 'users' removed from EhcacheManager.
+2020-08-13 17:30:09,620 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-08-13 17:30:09,666 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getTestExecutionListeners:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@55cf0d14, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3b74ac8, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@27adc16e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@b83a9be, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2609b277, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1fd14d74, org.springframework.test.context.event.EventPublishingTestExecutionListener@563e4951]
+2020-08-13 17:30:10,763 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-13 17:30:11,164 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:187 - Finished Spring Data repository scanning in 306ms. Found 3 JPA repository interfaces.
+2020-08-13 17:30:13,243 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2020-08-13 17:30:13,298 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 17:30:13,393 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 17:30:13,689 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-13 17:30:13,834 INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-13 17:30:14,248 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-13 17:30:15,179 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2020-08-13 17:30:15,933 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-13 17:30:17,344 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-13 17:30:17,362 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 17:30:19,170 INFO  result.beforeTestExecution:23 - 
+Start delete()
+2020-08-13 17:30:19,342 INFO  result.afterAll:34 - 
+StopWatch 'Execution time of DishServiceTest': running time = 155264248 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+155264248  100 %  delete()
+
+
+2020-08-13 17:30:19,364 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 17:30:19,421 INFO  org.ehcache.core.EhcacheManager.removeCache:216 - Cache 'users' removed from EhcacheManager.
+2020-08-13 17:31:42,455 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-08-13 17:31:42,551 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getTestExecutionListeners:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31920ade, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d483de4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4032d386, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28d18df5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@934b6cb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@55cf0d14, org.springframework.test.context.event.EventPublishingTestExecutionListener@3b74ac8]
+2020-08-13 17:31:43,915 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-13 17:31:44,239 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:187 - Finished Spring Data repository scanning in 290ms. Found 3 JPA repository interfaces.
+2020-08-13 17:31:46,492 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2020-08-13 17:31:46,564 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 17:31:46,646 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 17:31:46,845 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-13 17:31:47,022 INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-13 17:31:47,357 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-13 17:31:48,382 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2020-08-13 17:31:49,138 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-13 17:31:50,733 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-13 17:31:50,751 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 17:31:52,667 INFO  result.beforeTestExecution:23 - 
+Start deleteNotFound()
+2020-08-13 17:31:52,806 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logWarning:230 - SQL Warning Code: -1100, SQLState: 02000
+2020-08-13 17:31:52,808 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logWarning:231 - no data
+2020-08-13 17:31:52,856 INFO  result.afterAll:34 - 
+StopWatch 'Execution time of DishServiceTest': running time = 164975544 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+164975544  100 %  deleteNotFound()
+
+
+2020-08-13 17:31:52,878 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 17:31:52,913 INFO  org.ehcache.core.EhcacheManager.removeCache:216 - Cache 'users' removed from EhcacheManager.
+2020-08-13 17:33:14,992 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-08-13 17:33:15,064 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getTestExecutionListeners:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31920ade, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d483de4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4032d386, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28d18df5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@934b6cb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@55cf0d14, org.springframework.test.context.event.EventPublishingTestExecutionListener@3b74ac8]
+2020-08-13 17:33:16,658 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-13 17:33:17,012 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:187 - Finished Spring Data repository scanning in 280ms. Found 3 JPA repository interfaces.
+2020-08-13 17:33:19,081 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2020-08-13 17:33:19,132 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 17:33:19,176 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 17:33:19,426 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-13 17:33:19,580 INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-13 17:33:19,918 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-13 17:33:20,819 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2020-08-13 17:33:21,505 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-13 17:33:22,989 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-13 17:33:23,007 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 17:33:24,711 INFO  result.beforeTestExecution:23 - 
+Start deleteNotOwn()
+2020-08-13 17:33:24,813 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logWarning:230 - SQL Warning Code: -1100, SQLState: 02000
+2020-08-13 17:33:24,815 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logWarning:231 - no data
+2020-08-13 17:33:24,865 INFO  result.afterAll:34 - 
+StopWatch 'Execution time of DishServiceTest': running time = 124341620 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+124341620  100 %  deleteNotOwn()
+
+
+2020-08-13 17:33:24,886 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 17:33:24,915 INFO  org.ehcache.core.EhcacheManager.removeCache:216 - Cache 'users' removed from EhcacheManager.
+2020-08-13 17:46:52,500 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-08-13 17:46:52,540 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getTestExecutionListeners:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31920ade, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d483de4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4032d386, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28d18df5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@934b6cb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@55cf0d14, org.springframework.test.context.event.EventPublishingTestExecutionListener@3b74ac8]
+2020-08-13 17:46:54,084 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-13 17:46:54,509 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:187 - Finished Spring Data repository scanning in 388ms. Found 3 JPA repository interfaces.
+2020-08-13 17:46:56,554 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2020-08-13 17:46:56,604 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 17:46:56,649 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 17:46:56,827 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-13 17:46:56,951 INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-13 17:46:57,257 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-13 17:46:58,192 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2020-08-13 17:46:58,939 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-13 17:47:00,469 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-13 17:47:00,486 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 17:47:02,396 INFO  result.beforeTestExecution:23 - 
+Start create()
+2020-08-13 17:47:02,516 INFO  result.afterAll:34 - 
+StopWatch 'Execution time of DishServiceTest': running time = 49755014 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+049755014  100 %  create()
+
+
+2020-08-13 17:47:02,540 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 17:47:02,570 INFO  org.ehcache.core.EhcacheManager.removeCache:216 - Cache 'users' removed from EhcacheManager.
+2020-08-13 17:51:29,238 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-08-13 17:51:29,308 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getTestExecutionListeners:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31920ade, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d483de4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4032d386, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28d18df5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@934b6cb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@55cf0d14, org.springframework.test.context.event.EventPublishingTestExecutionListener@3b74ac8]
+2020-08-13 17:51:30,769 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-13 17:51:31,097 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:187 - Finished Spring Data repository scanning in 295ms. Found 3 JPA repository interfaces.
+2020-08-13 17:51:33,020 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2020-08-13 17:51:33,075 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 17:51:33,145 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 17:51:33,321 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-13 17:51:33,450 INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-13 17:51:33,744 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-13 17:51:34,644 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2020-08-13 17:51:35,359 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-13 17:51:36,764 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-13 17:51:36,778 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 17:51:38,606 INFO  result.beforeTestExecution:23 - 
+Start create()
+2020-08-13 17:51:38,700 INFO  result.afterAll:34 - 
+StopWatch 'Execution time of DishServiceTest': running time = 46017469 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+046017469  100 %  create()
+
+
+2020-08-13 17:51:38,720 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 17:51:38,749 INFO  org.ehcache.core.EhcacheManager.removeCache:216 - Cache 'users' removed from EhcacheManager.
+2020-08-13 18:00:12,327 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-08-13 18:00:12,406 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getTestExecutionListeners:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1d483de4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4032d386, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@28d18df5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@934b6cb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@55cf0d14, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3b74ac8, org.springframework.test.context.event.EventPublishingTestExecutionListener@27adc16e]
+2020-08-13 18:00:13,843 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-13 18:00:14,116 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:187 - Finished Spring Data repository scanning in 238ms. Found 3 JPA repository interfaces.
+2020-08-13 18:00:16,163 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2020-08-13 18:00:16,224 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:00:16,282 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:00:16,541 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-13 18:00:16,693 INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-13 18:00:16,990 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-13 18:00:17,970 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2020-08-13 18:00:18,804 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-13 18:00:20,206 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-13 18:00:20,224 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:00:21,861 INFO  result.beforeTestExecution:23 - 
+Start create()
+2020-08-13 18:00:21,932 INFO  result.afterAll:34 - 
+StopWatch 'Execution time of DishServiceTest': running time = 29704599 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+029704599  100 %  create()
+
+
+2020-08-13 18:00:21,952 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:00:21,982 INFO  org.ehcache.core.EhcacheManager.removeCache:216 - Cache 'users' removed from EhcacheManager.
+2020-08-13 18:02:01,721 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-08-13 18:02:01,829 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getTestExecutionListeners:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31920ade, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d483de4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4032d386, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28d18df5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@934b6cb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@55cf0d14, org.springframework.test.context.event.EventPublishingTestExecutionListener@3b74ac8]
+2020-08-13 18:02:03,421 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-13 18:02:03,759 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:187 - Finished Spring Data repository scanning in 302ms. Found 3 JPA repository interfaces.
+2020-08-13 18:02:05,785 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2020-08-13 18:02:05,828 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:02:05,873 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:02:06,042 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-13 18:02:06,165 INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-13 18:02:06,452 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-13 18:02:07,392 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2020-08-13 18:02:08,000 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-13 18:02:09,563 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-13 18:02:09,575 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:02:11,614 INFO  result.beforeTestExecution:23 - 
+Start create()
+2020-08-13 18:02:11,871 INFO  result.afterAll:34 - 
+StopWatch 'Execution time of DishServiceTest': running time = 213237387 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+213237387  100 %  create()
+
+
+2020-08-13 18:02:11,919 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:02:11,965 INFO  org.ehcache.core.EhcacheManager.removeCache:216 - Cache 'users' removed from EhcacheManager.
+2020-08-13 18:05:24,954 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-08-13 18:05:25,039 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getTestExecutionListeners:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31920ade, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d483de4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4032d386, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28d18df5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@934b6cb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@55cf0d14, org.springframework.test.context.event.EventPublishingTestExecutionListener@3b74ac8]
+2020-08-13 18:05:26,363 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-13 18:05:26,675 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:187 - Finished Spring Data repository scanning in 277ms. Found 3 JPA repository interfaces.
+2020-08-13 18:05:28,491 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2020-08-13 18:05:28,544 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:05:28,590 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:05:28,851 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-13 18:05:28,958 INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-13 18:05:29,267 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-13 18:05:30,298 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2020-08-13 18:05:31,098 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-13 18:05:32,436 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-13 18:05:32,453 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:05:34,140 INFO  result.beforeTestExecution:23 - 
+Start create()
+2020-08-13 18:05:34,296 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:137 - SQL Error: -10, SQLState: 23502
+2020-08-13 18:05:34,297 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:142 - integrity constraint violation: NOT NULL check constraint; SYS_CT_10135 table: DISH column: RESTAURANTID
+2020-08-13 18:05:34,377 INFO  result.afterAll:34 - 
+StopWatch 'Execution time of DishServiceTest': running time = 187186215 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+187186215  100 %  create()
+
+
+2020-08-13 18:05:34,403 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:05:34,443 INFO  org.ehcache.core.EhcacheManager.removeCache:216 - Cache 'users' removed from EhcacheManager.
+2020-08-13 18:08:03,413 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-08-13 18:08:03,494 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getTestExecutionListeners:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31920ade, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d483de4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4032d386, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28d18df5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@934b6cb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@55cf0d14, org.springframework.test.context.event.EventPublishingTestExecutionListener@3b74ac8]
+2020-08-13 18:08:04,775 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-13 18:08:05,104 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:187 - Finished Spring Data repository scanning in 288ms. Found 3 JPA repository interfaces.
+2020-08-13 18:08:07,191 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2020-08-13 18:08:07,255 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:08:07,298 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:08:07,459 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-13 18:08:07,573 INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-13 18:08:07,858 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-13 18:08:08,750 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2020-08-13 18:08:09,405 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-13 18:08:10,962 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-13 18:08:10,979 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:08:12,887 INFO  result.beforeTestExecution:23 - 
+Start create()
+2020-08-13 18:08:13,045 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:137 - SQL Error: -10, SQLState: 23502
+2020-08-13 18:08:13,047 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:142 - integrity constraint violation: NOT NULL check constraint; SYS_CT_10133 table: DISH column: RESTAURANTID
+2020-08-13 18:08:13,133 INFO  result.afterAll:34 - 
+StopWatch 'Execution time of DishServiceTest': running time = 178735062 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+178735062  100 %  create()
+
+
+2020-08-13 18:08:13,162 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:08:13,193 INFO  org.ehcache.core.EhcacheManager.removeCache:216 - Cache 'users' removed from EhcacheManager.
+2020-08-13 18:30:28,936 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-08-13 18:30:29,020 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getTestExecutionListeners:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31920ade, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d483de4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4032d386, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28d18df5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@934b6cb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@55cf0d14, org.springframework.test.context.event.EventPublishingTestExecutionListener@3b74ac8]
+2020-08-13 18:30:30,453 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-13 18:30:30,743 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:187 - Finished Spring Data repository scanning in 256ms. Found 3 JPA repository interfaces.
+2020-08-13 18:30:32,713 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2020-08-13 18:30:32,765 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:30:32,829 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:30:33,029 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-13 18:30:33,124 INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-13 18:30:33,490 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-13 18:30:34,367 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2020-08-13 18:30:35,138 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-13 18:30:36,532 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-13 18:30:36,551 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:30:38,201 INFO  result.beforeTestExecution:23 - 
+Start create()
+2020-08-13 18:30:38,374 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:137 - SQL Error: -10, SQLState: 23502
+2020-08-13 18:30:38,377 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions:142 - integrity constraint violation: NOT NULL check constraint; SYS_CT_10135 table: DISH column: RESTAURANTID
+2020-08-13 18:30:38,483 INFO  result.afterAll:34 - 
+StopWatch 'Execution time of DishServiceTest': running time = 190481718 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+190481718  100 %  create()
+
+
+2020-08-13 18:30:38,527 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:30:38,560 INFO  org.ehcache.core.EhcacheManager.removeCache:216 - Cache 'users' removed from EhcacheManager.
+2020-08-13 18:32:54,982 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-08-13 18:32:55,038 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getTestExecutionListeners:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31920ade, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d483de4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4032d386, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28d18df5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@934b6cb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@55cf0d14, org.springframework.test.context.event.EventPublishingTestExecutionListener@3b74ac8]
+2020-08-13 18:32:56,646 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-13 18:32:56,985 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:187 - Finished Spring Data repository scanning in 279ms. Found 3 JPA repository interfaces.
+2020-08-13 18:32:58,859 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2020-08-13 18:32:58,916 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:32:58,974 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:32:59,195 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-13 18:32:59,300 INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-13 18:32:59,613 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-13 18:33:00,529 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2020-08-13 18:33:01,182 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-13 18:33:02,618 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-13 18:33:02,635 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:33:04,618 INFO  result.beforeTestExecution:23 - 
+Start create()
+2020-08-13 18:33:04,982 INFO  result.afterAll:34 - 
+StopWatch 'Execution time of DishServiceTest': running time = 337510115 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+337510115  100 %  create()
+
+
+2020-08-13 18:33:05,004 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:33:05,035 INFO  org.ehcache.core.EhcacheManager.removeCache:216 - Cache 'users' removed from EhcacheManager.
+2020-08-13 18:33:40,116 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-08-13 18:33:40,200 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getTestExecutionListeners:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@934b6cb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@55cf0d14, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3b74ac8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@27adc16e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@b83a9be, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2609b277, org.springframework.test.context.event.EventPublishingTestExecutionListener@1fd14d74]
+2020-08-13 18:33:41,519 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-13 18:33:41,878 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:187 - Finished Spring Data repository scanning in 321ms. Found 3 JPA repository interfaces.
+2020-08-13 18:33:43,928 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2020-08-13 18:33:43,988 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:33:44,034 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:33:44,300 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-13 18:33:44,428 INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-13 18:33:44,713 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-13 18:33:45,559 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2020-08-13 18:33:46,211 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-13 18:33:47,561 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-13 18:33:47,579 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:33:49,183 INFO  result.beforeTestExecution:23 - 
+Start create()
+2020-08-13 18:33:49,203 INFO  com.oriongroup.restaurant.service.RestService.create:46 - create
+2020-08-13 18:33:49,427 INFO  com.oriongroup.restaurant.service.RestService.get:41 - GET
+2020-08-13 18:33:49,527 INFO  result.beforeTestExecution:23 - 
+Start delete()
+2020-08-13 18:33:49,528 INFO  com.oriongroup.restaurant.service.RestService.delete:57 - delete
+2020-08-13 18:33:49,594 INFO  com.oriongroup.restaurant.service.RestService.get:41 - GET
+2020-08-13 18:33:49,630 INFO  result.beforeTestExecution:23 - 
+Start getAll()
+2020-08-13 18:33:49,631 INFO  com.oriongroup.restaurant.service.RestService.getAll:25 - getAll
+2020-08-13 18:33:49,743 INFO  com.oriongroup.restaurant.service.RestService.lambda$getAll$0:27 - id:10002 name:Ласточка
+2020-08-13 18:33:49,745 INFO  com.oriongroup.restaurant.service.RestService.lambda$getAll$0:27 - id:10003 name:СССР
+2020-08-13 18:33:49,816 INFO  result.beforeTestExecution:23 - 
+Start findAllWithDishList()
+2020-08-13 18:33:49,818 INFO  com.oriongroup.restaurant.service.RestService.findAllWithDishList:33 - findAllWithDishList
+2020-08-13 18:33:49,912 INFO  result.beforeTestExecution:23 - 
+Start update()
+2020-08-13 18:33:49,913 INFO  com.oriongroup.restaurant.service.RestService.update:51 - update
+2020-08-13 18:33:50,017 INFO  com.oriongroup.restaurant.service.RestService.update:54 - Restaurant:name:updated
+2020-08-13 18:33:50,022 INFO  com.oriongroup.restaurant.service.RestService.get:41 - GET
+2020-08-13 18:33:50,078 INFO  result.beforeTestExecution:23 - 
+Start get()
+2020-08-13 18:33:50,080 INFO  com.oriongroup.restaurant.service.RestService.get:41 - GET
+2020-08-13 18:33:50,092 INFO  com.oriongroup.restaurant.service.RestService.get:41 - GET
+2020-08-13 18:33:50,123 INFO  result.afterAll:34 - 
+StopWatch 'Execution time of RestServiceTest': running time = 726374157 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+299083274  041 %  create()
+072211992  010 %  delete()
+144141274  020 %  getAll()
+061141209  008 %  findAllWithDishList()
+120984508  017 %  update()
+028811900  004 %  get()
+
+
+2020-08-13 18:33:50,143 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:33:50,177 INFO  org.ehcache.core.EhcacheManager.removeCache:216 - Cache 'users' removed from EhcacheManager.
+2020-08-13 18:34:04,316 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-08-13 18:34:04,418 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getTestExecutionListeners:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4032d386, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@28d18df5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@934b6cb, org.springframework.test.context.support.DirtiesContextTestExecutionListener@55cf0d14, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3b74ac8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@27adc16e, org.springframework.test.context.event.EventPublishingTestExecutionListener@b83a9be]
+2020-08-13 18:34:05,752 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-13 18:34:06,165 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:187 - Finished Spring Data repository scanning in 367ms. Found 3 JPA repository interfaces.
+2020-08-13 18:34:08,471 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2020-08-13 18:34:08,522 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:34:08,578 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:34:08,763 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-13 18:34:08,900 INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-13 18:34:09,183 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-13 18:34:10,090 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2020-08-13 18:34:10,757 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-13 18:34:12,169 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-13 18:34:12,186 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:34:14,069 INFO  result.beforeTestExecution:23 - 
+Start create()
+2020-08-13 18:34:14,088 INFO  com.oriongroup.restaurant.service.UserService.create:38 - create
+2020-08-13 18:34:14,360 INFO  com.oriongroup.restaurant.service.UserService.get:33 - GET
+2020-08-13 18:34:14,483 INFO  result.beforeTestExecution:23 - 
+Start delete()
+2020-08-13 18:34:14,484 INFO  com.oriongroup.restaurant.service.UserService.delete:51 - delete
+2020-08-13 18:34:14,547 INFO  com.oriongroup.restaurant.service.UserService.get:33 - GET
+2020-08-13 18:34:14,586 INFO  result.beforeTestExecution:23 - 
+Start getAll()
+2020-08-13 18:34:14,589 INFO  com.oriongroup.restaurant.service.UserService.getAll:26 - getAll
+2020-08-13 18:34:14,680 INFO  com.oriongroup.restaurant.service.UserService.lambda$getAll$0:28 - id:10000 role:[ADMIN]
+2020-08-13 18:34:14,681 INFO  com.oriongroup.restaurant.service.UserService.lambda$getAll$0:28 - id:10001 role:[USER]
+2020-08-13 18:34:14,745 INFO  result.beforeTestExecution:23 - 
+Start update()
+2020-08-13 18:34:14,746 INFO  com.oriongroup.restaurant.service.UserService.update:44 - update
+2020-08-13 18:34:14,773 INFO  com.oriongroup.restaurant.service.UserService.update:47 - User:name:updated
+2020-08-13 18:34:14,778 INFO  com.oriongroup.restaurant.service.UserService.get:33 - GET
+2020-08-13 18:34:14,826 INFO  result.beforeTestExecution:23 - 
+Start get()
+2020-08-13 18:34:14,827 INFO  com.oriongroup.restaurant.service.UserService.get:33 - GET
+2020-08-13 18:34:14,839 INFO  com.oriongroup.restaurant.service.UserService.get:33 - GET
+2020-08-13 18:34:14,859 INFO  result.afterAll:34 - 
+StopWatch 'Execution time of UserServiceTest': running time = 624628584 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+357990489  057 %  create()
+070469985  011 %  delete()
+126763851  020 %  getAll()
+047753498  008 %  update()
+021650761  003 %  get()
+
+
+2020-08-13 18:34:14,886 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:34:14,917 INFO  org.ehcache.core.EhcacheManager.removeCache:216 - Cache 'users' removed from EhcacheManager.
+2020-08-13 18:38:26,088 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-08-13 18:38:26,123 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getTestExecutionListeners:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31920ade, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d483de4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4032d386, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28d18df5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@934b6cb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@55cf0d14, org.springframework.test.context.event.EventPublishingTestExecutionListener@3b74ac8]
+2020-08-13 18:38:28,033 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-13 18:38:28,398 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:187 - Finished Spring Data repository scanning in 310ms. Found 3 JPA repository interfaces.
+2020-08-13 18:38:30,281 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2020-08-13 18:38:30,329 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:38:30,376 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:38:30,655 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-13 18:38:30,786 INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-13 18:38:31,112 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-13 18:38:32,051 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2020-08-13 18:38:32,728 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-13 18:38:34,147 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-13 18:38:34,164 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:38:35,985 INFO  result.beforeTestExecution:23 - 
+Start get()
+2020-08-13 18:38:36,246 INFO  result.afterAll:34 - 
+StopWatch 'Execution time of DishServiceTest': running time = 234481697 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+234481697  100 %  get()
+
+
+2020-08-13 18:38:36,262 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:38:36,284 INFO  org.ehcache.core.EhcacheManager.removeCache:216 - Cache 'users' removed from EhcacheManager.
+2020-08-13 18:41:38,064 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-08-13 18:41:38,154 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getTestExecutionListeners:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31920ade, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d483de4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4032d386, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28d18df5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@934b6cb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@55cf0d14, org.springframework.test.context.event.EventPublishingTestExecutionListener@3b74ac8]
+2020-08-13 18:41:39,597 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-13 18:41:39,934 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:187 - Finished Spring Data repository scanning in 289ms. Found 3 JPA repository interfaces.
+2020-08-13 18:41:41,856 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2020-08-13 18:41:41,906 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:41:41,951 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:41:42,141 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-13 18:41:42,279 INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-13 18:41:42,574 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-13 18:41:43,392 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2020-08-13 18:41:44,156 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-13 18:41:45,791 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-13 18:41:45,802 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:41:47,509 INFO  result.beforeTestExecution:23 - 
+Start update()
+2020-08-13 18:41:47,917 INFO  result.afterAll:34 - 
+StopWatch 'Execution time of DishServiceTest': running time = 386451269 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+386451269  100 %  update()
+
+
+2020-08-13 18:41:47,933 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:41:47,956 INFO  org.ehcache.core.EhcacheManager.removeCache:216 - Cache 'users' removed from EhcacheManager.
+2020-08-13 18:43:22,040 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-08-13 18:43:22,096 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getTestExecutionListeners:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31920ade, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d483de4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4032d386, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28d18df5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@934b6cb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@55cf0d14, org.springframework.test.context.event.EventPublishingTestExecutionListener@3b74ac8]
+2020-08-13 18:43:23,567 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-13 18:43:24,036 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:187 - Finished Spring Data repository scanning in 395ms. Found 3 JPA repository interfaces.
+2020-08-13 18:43:26,185 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2020-08-13 18:43:26,252 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:43:26,303 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:43:26,570 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-13 18:43:26,695 INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-13 18:43:27,041 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-13 18:43:27,989 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2020-08-13 18:43:28,781 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-13 18:43:30,265 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-13 18:43:30,309 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:43:32,066 INFO  result.beforeTestExecution:23 - 
+Start getAll()
+2020-08-13 18:43:32,324 INFO  result.afterAll:34 - 
+StopWatch 'Execution time of DishServiceTest': running time = 214021858 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+214021858  100 %  getAll()
+
+
+2020-08-13 18:43:32,344 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:43:32,384 INFO  org.ehcache.core.EhcacheManager.removeCache:216 - Cache 'users' removed from EhcacheManager.
+2020-08-13 18:45:37,091 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-08-13 18:45:37,174 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getTestExecutionListeners:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31920ade, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d483de4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4032d386, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28d18df5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@934b6cb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@55cf0d14, org.springframework.test.context.event.EventPublishingTestExecutionListener@3b74ac8]
+2020-08-13 18:45:38,813 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-13 18:45:39,156 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:187 - Finished Spring Data repository scanning in 275ms. Found 3 JPA repository interfaces.
+2020-08-13 18:45:41,404 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2020-08-13 18:45:41,472 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:45:41,556 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:45:41,770 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-13 18:45:41,902 INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-13 18:45:42,211 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-13 18:45:43,887 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2020-08-13 18:45:44,579 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-13 18:45:46,605 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-13 18:45:46,616 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:45:48,686 INFO  result.beforeTestExecution:23 - 
+Start getAll()
+2020-08-13 18:45:49,065 INFO  result.afterAll:34 - 
+StopWatch 'Execution time of DishServiceTest': running time = 324923969 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+324923969  100 %  getAll()
+
+
+2020-08-13 18:45:49,089 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:45:49,116 INFO  org.ehcache.core.EhcacheManager.removeCache:216 - Cache 'users' removed from EhcacheManager.
+2020-08-13 18:46:26,585 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-08-13 18:46:26,693 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getTestExecutionListeners:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@31920ade, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d483de4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4032d386, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28d18df5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@934b6cb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@55cf0d14, org.springframework.test.context.event.EventPublishingTestExecutionListener@3b74ac8]
+2020-08-13 18:46:28,048 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-13 18:46:28,341 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:187 - Finished Spring Data repository scanning in 252ms. Found 3 JPA repository interfaces.
+2020-08-13 18:46:30,344 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2020-08-13 18:46:30,394 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:46:30,445 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:46:30,692 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-13 18:46:30,854 INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-13 18:46:31,136 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-13 18:46:32,010 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2020-08-13 18:46:32,712 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-13 18:46:34,025 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-13 18:46:34,043 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:46:35,962 INFO  result.beforeTestExecution:23 - 
+Start getAll()
+2020-08-13 18:46:36,189 INFO  result.afterAll:34 - 
+StopWatch 'Execution time of DishServiceTest': running time = 193600407 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+193600407  100 %  getAll()
+
+
+2020-08-13 18:46:36,218 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:46:36,258 INFO  org.ehcache.core.EhcacheManager.removeCache:216 - Cache 'users' removed from EhcacheManager.
+2020-08-13 18:49:18,888 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-08-13 18:49:19,003 INFO  o.s.t.c.support.DefaultTestContextBootstrapper.getTestExecutionListeners:177 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@28d18df5, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@934b6cb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@55cf0d14, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3b74ac8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@27adc16e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@b83a9be, org.springframework.test.context.event.EventPublishingTestExecutionListener@2609b277]
+2020-08-13 18:49:20,585 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-13 18:49:20,969 INFO  o.s.d.r.config.RepositoryConfigurationDelegate.registerRepositoriesIn:187 - Finished Spring Data repository scanning in 320ms. Found 3 JPA repository interfaces.
+2020-08-13 18:49:23,024 INFO  org.ehcache.core.EhcacheManager.createCache:305 - Cache 'users' created in EhcacheManager.
+2020-08-13 18:49:23,078 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:49:23,129 INFO  org.ehcache.jsr107.Eh107CacheManager.registerObject:378 - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./home/andrey/IdeaProjects/restaurant/target/classes/cache/ehcache.xml,Cache=users
+2020-08-13 18:49:23,312 INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-13 18:49:23,423 INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-08-13 18:49:23,749 INFO  org.hibernate.annotations.common.Version.<clinit>:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-13 18:49:24,679 INFO  org.hibernate.dialect.Dialect.<init>:172 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2020-08-13 18:49:25,391 INFO  org.hibernate.validator.internal.util.Version.<clinit>:21 - HV000001: Hibernate Validator 6.1.5.Final
+2020-08-13 18:49:26,781 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-13 18:49:26,798 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:416 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:49:28,468 INFO  result.beforeTestExecution:23 - 
+Start create()
+2020-08-13 18:49:28,486 INFO  com.oriongroup.restaurant.service.DishService.create:44 - CREATE
+2020-08-13 18:49:28,768 INFO  com.oriongroup.restaurant.service.DishService.get:25 - GET
+2020-08-13 18:49:28,870 INFO  result.beforeTestExecution:23 - 
+Start delete()
+2020-08-13 18:49:28,873 INFO  com.oriongroup.restaurant.service.DishService.delete:29 - DELETE
+2020-08-13 18:49:28,929 INFO  com.oriongroup.restaurant.service.DishService.get:25 - GET
+2020-08-13 18:49:28,956 INFO  result.beforeTestExecution:23 - 
+Start getAll()
+2020-08-13 18:49:28,958 INFO  com.oriongroup.restaurant.service.DishService.getAll:33 - GETALL
+2020-08-13 18:49:29,015 INFO  result.beforeTestExecution:23 - 
+Start deleteNotOwn()
+2020-08-13 18:49:29,016 INFO  com.oriongroup.restaurant.service.DishService.delete:29 - DELETE
+2020-08-13 18:49:29,021 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logWarning:230 - SQL Warning Code: -1100, SQLState: 02000
+2020-08-13 18:49:29,022 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logWarning:231 - no data
+2020-08-13 18:49:29,051 INFO  result.beforeTestExecution:23 - 
+Start update()
+2020-08-13 18:49:29,055 INFO  com.oriongroup.restaurant.service.DishService.update:38 - UPDATE
+2020-08-13 18:49:29,078 INFO  com.oriongroup.restaurant.service.DishService.get:25 - GET
+2020-08-13 18:49:29,111 INFO  result.beforeTestExecution:23 - 
+Start deleteNotFound()
+2020-08-13 18:49:29,116 INFO  com.oriongroup.restaurant.service.DishService.delete:29 - DELETE
+2020-08-13 18:49:29,124 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logWarning:230 - SQL Warning Code: -1100, SQLState: 02000
+2020-08-13 18:49:29,126 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logWarning:231 - no data
+2020-08-13 18:49:29,174 INFO  result.beforeTestExecution:23 - 
+Start get()
+2020-08-13 18:49:29,175 INFO  com.oriongroup.restaurant.service.DishService.get:25 - GET
+2020-08-13 18:49:29,206 INFO  result.afterAll:34 - 
+StopWatch 'Execution time of DishServiceTest': running time = 507669268 ns
+---------------------------------------------
+ns         %     Task name
+---------------------------------------------
+351116073  069 %  create()
+061718475  012 %  delete()
+032859948  006 %  getAll()
+008115073  002 %  deleteNotOwn()
+028458969  006 %  update()
+013300606  003 %  deleteNotFound()
+012100124  002 %  get()
+
+
+2020-08-13 18:49:29,221 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:598 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-13 18:49:29,247 INFO  org.ehcache.core.EhcacheManager.removeCache:216 - Cache 'users' removed from EhcacheManager.

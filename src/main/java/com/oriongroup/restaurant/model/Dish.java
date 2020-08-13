@@ -15,27 +15,27 @@ public class Dish extends AbstractBaseEntity {
     @Column(name = "price")
     @NotNull
     private BigDecimal price;
-    @Column(name = "restaurantId")
-    @NotNull
-    private Integer restaurantId;
+
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "restaurantId",nullable = false,referencedColumnName = "id",insertable = false,updatable = false)
+    @JoinColumn(name = "restaurantId",nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Restaurant restaurant;
 
     public Dish() {
     }
 
-    public Dish(Integer id, String name, BigDecimal price, Integer restaurantId) {
+    public Dish(Integer id, String name, BigDecimal price) {
         super(id);
         this.name = name;
         this.price = price;
-        this.restaurantId = restaurantId;
+
     }
 
-    public Dish(String name, BigDecimal price, Integer restaurantId) {
-        this(null, name, price, restaurantId);
+    public Dish(String name, BigDecimal price) {
+        this(null, name, price);
     }
+
+
 
     public String getName() {
         return name;
@@ -45,9 +45,7 @@ public class Dish extends AbstractBaseEntity {
         return price;
     }
 
-    public Integer getRestaurantId() {
-        return restaurantId;
-    }
+
 
     public void setName(String name) {
         this.name = name;
@@ -57,9 +55,7 @@ public class Dish extends AbstractBaseEntity {
         this.price = price;
     }
 
-    public void setRestaurantId(Integer restaurantId) {
-        this.restaurantId = restaurantId;
-    }
+
 
     public Restaurant getRestaurant() {
         return restaurant;
