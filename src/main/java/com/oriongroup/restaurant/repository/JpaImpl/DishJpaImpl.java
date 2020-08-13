@@ -1,7 +1,9 @@
-package com.oriongroup.restaurant.repository;
+package com.oriongroup.restaurant.repository.JpaImpl;
 
 import com.oriongroup.restaurant.model.Dish;
 import com.oriongroup.restaurant.repository.JPA.DishRepo;
+import com.oriongroup.restaurant.repository.extendDataJpa.DishJPA;
+import com.oriongroup.restaurant.repository.extendDataJpa.RestaurantJPA;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 

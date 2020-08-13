@@ -7,9 +7,9 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "vote")
 public class Vote extends AbstractBaseEntity{
-    @Column(name = "restaurantId",nullable = false)
+    @Column(name = "restaurantId",nullable = false,insertable = false,updatable = false)
     private Integer restaurantId;
-    @Column(name = "userId", nullable = false)
+    @Column(name = "userId", nullable = false,insertable = false,updatable = false)
     private Integer userId;
 
     @Column(name = "timeExist",nullable = false)
@@ -17,11 +17,11 @@ public class Vote extends AbstractBaseEntity{
     private LocalDateTime timeExist=LocalDateTime.now();
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "restaurantId",nullable = false, referencedColumnName = "id",insertable = false,updatable = false)
+    @JoinColumn(name = "restaurantId",nullable = false, referencedColumnName = "id")
     private Restaurant restaurant;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userId",nullable = false,referencedColumnName = "id",insertable = false,updatable = false)
+    @JoinColumn(name = "userId",nullable = false,referencedColumnName = "id")
     private User user;
 
     public Vote(){}
@@ -71,5 +71,11 @@ public class Vote extends AbstractBaseEntity{
         this.restaurant = restaurant;
     }
 
+    public User getUser() {
+        return user;
+    }
 
+    public void setUser(User user) {
+        this.user = user;
+    }
 }

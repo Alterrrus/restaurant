@@ -1,4 +1,4 @@
-package com.oriongroup.restaurant.repository;
+package com.oriongroup.restaurant.repository.extendDataJpa;
 
 import com.oriongroup.restaurant.model.Restaurant;
 import org.springframework.data.jpa.repository.EntityGraph;

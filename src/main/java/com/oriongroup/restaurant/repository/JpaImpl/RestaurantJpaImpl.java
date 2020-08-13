@@ -1,7 +1,8 @@
-package com.oriongroup.restaurant.repository;
+package com.oriongroup.restaurant.repository.JpaImpl;
 
 import com.oriongroup.restaurant.model.Restaurant;
 import com.oriongroup.restaurant.repository.JPA.RestaurantRepo;
+import com.oriongroup.restaurant.repository.extendDataJpa.RestaurantJPA;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Repository;

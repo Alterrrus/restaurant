@@ -17,7 +17,7 @@ public class Dish extends AbstractBaseEntity {
     private BigDecimal price;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "restaurantId",nullable = false)
+    @JoinColumn(name = "restaurantId",nullable = false,referencedColumnName = "id")
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Restaurant restaurant;
 
