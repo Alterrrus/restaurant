@@ -1,5 +1,7 @@
 package com.oriongroup.restaurant.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.List;
@@ -13,9 +15,11 @@ public class Restaurant extends AbstractBaseEntity{
 
 
     @OneToMany(mappedBy = "restaurant",fetch = FetchType.LAZY)
+    @JsonManagedReference(value = "voteList")
     private List<Vote> voteList;
 
     @OneToMany(mappedBy = "restaurant",fetch = FetchType.LAZY)
+    @JsonManagedReference(value = "dishList")
     private List<Dish> dishList;
 
     public Restaurant(){}

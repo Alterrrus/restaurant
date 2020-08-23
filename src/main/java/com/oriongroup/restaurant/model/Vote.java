@@ -1,9 +1,12 @@
 package com.oriongroup.restaurant.model;
 
-import com.oriongroup.restaurant.util.LocalDateTimePersistenceConverter;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.oriongroup.restaurant.util.DateTimeUtil;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+@NamedQuery(name = "getByTimeExist",query = "SELECT v FROM Vote v WHERE v.user.id=:userId AND v.timeExist>=: startDate AND v.timeExist<: endTime")
 @Entity
 @Table(name = "vote")
 public class Vote extends AbstractBaseEntity{
@@ -13,15 +16,17 @@ public class Vote extends AbstractBaseEntity{
     private Integer userId;
 
     @Column(name = "timeExist",nullable = false)
-    @Convert(converter = LocalDateTimePersistenceConverter.class)
+    @DateTimeFormat(pattern = DateTimeUtil.DATE_TIME_PATTERN)
     private LocalDateTime timeExist=LocalDateTime.now();
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "restaurantId",nullable = false, referencedColumnName = "id")
+    @JsonBackReference(value = "voteList")
     private Restaurant restaurant;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "userId",nullable = false,referencedColumnName = "id")
+
     private User user;
 
     public Vote(){}
@@ -34,6 +39,11 @@ public class Vote extends AbstractBaseEntity{
 
     public Vote(Integer id, Integer userId,Integer restaurantId, LocalDateTime timeExist) {
         super(id);
+        this.restaurantId=restaurantId;
+        this.userId = userId;
+        this.timeExist=timeExist;
+    }
+    public Vote(Integer userId,Integer restaurantId, LocalDateTime timeExist) {
         this.restaurantId=restaurantId;
         this.userId = userId;
         this.timeExist=timeExist;

@@ -36,4 +36,9 @@ public class UserJpaImpl implements UserRepo {
     public boolean delete(Integer id) {
         return userJPA.delete(id)!=0;
     }
+
+    @Override
+    public User getByEmail(String email) {
+        return userJPA.getByEmail(email);
+    }
 }

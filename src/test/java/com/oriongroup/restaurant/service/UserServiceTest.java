@@ -33,7 +33,6 @@ class UserServiceTest extends AbstractServiceTest{
     @Test
     public void create() throws Exception {
         User user=userService.create(NEW_USER);
-
         int newId=user.id();
         User user1=NEW_USER;
         user1.setId(newId);

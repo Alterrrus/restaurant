@@ -1,5 +1,7 @@
 package com.oriongroup.restaurant.model;
 
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -19,6 +21,7 @@ public class Dish extends AbstractBaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "restaurantId",nullable = false,referencedColumnName = "id")
     @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonBackReference(value = "dishList")
     private Restaurant restaurant;
 
     public Dish() {

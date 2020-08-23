@@ -1,14 +1,14 @@
 package com.oriongroup.restaurant.model;
 
 
-import org.springframework.data.domain.Persistable;
+import com.oriongroup.restaurant.HasId;
 import org.springframework.util.Assert;
 
 import javax.persistence.*;
 
 @MappedSuperclass
 @Access(AccessType.FIELD)
-public abstract class AbstractBaseEntity implements Persistable<Integer> {
+public abstract class AbstractBaseEntity implements HasId {
     public static final int START_SEQ = 10000;
     @Id
     @SequenceGenerator(name = "global_seq", sequenceName = "global_seq", allocationSize = 1, initialValue = START_SEQ)

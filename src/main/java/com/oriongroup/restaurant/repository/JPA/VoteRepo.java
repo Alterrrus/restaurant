@@ -2,6 +2,7 @@ package com.oriongroup.restaurant.repository.JPA;
 
 import com.oriongroup.restaurant.model.Vote;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public interface VoteRepo {
@@ -12,4 +13,6 @@ public interface VoteRepo {
     Vote get(int id,int restaurantId,int userId);
 
     boolean delete(int id,int restaurantId,int userId);
+
+    List<Vote> getByTimeExist(int userId, LocalDateTime startDate, LocalDateTime endTime);
 }

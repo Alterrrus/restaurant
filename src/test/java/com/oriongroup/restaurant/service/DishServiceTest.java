@@ -46,7 +46,7 @@ class DishServiceTest extends AbstractServiceTest{
     @Test
     void update() throws Exception {
         Dish updated = new Dish(10008,"updated",new BigDecimal(500));
-        service.update(updated, 10002);
+        service.update(updated, 10002,10008);
         DISH_TEST_MATHER1.assertMatch(service.get(10008, 10002),new Dish(10008,"updated",new BigDecimal(500)) );
     }
 

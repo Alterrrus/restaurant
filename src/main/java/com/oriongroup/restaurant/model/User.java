@@ -36,6 +36,7 @@ public class User extends AbstractBaseEntity{
     private Set<Role> roles;
 
     @OneToMany(mappedBy = "user",fetch = FetchType.LAZY)
+
     private List<Vote> voteList;
 
     public void setVoteList(List<Vote> voteList) {

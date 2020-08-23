@@ -13,13 +13,15 @@ public class RestTestData {
     public static TestMatcher<Dish>DISH_TEST_MATHER= TestMatcher.usingEqualsComparator(Dish.class);
     public static TestMatcher<Dish>DISH_TEST_MATHER1= TestMatcher.usingFieldsWithIgnoringComparator(Dish.class,"restaurant");
     public static TestMatcher<User>USER_TEST_MATCHER=TestMatcher.usingFieldsWithIgnoringComparator(User.class,"voteList","registered");
-
+    public static TestMatcher<Vote>VOTE_TEST_MATCHER=TestMatcher.usingFieldsWithIgnoringComparator(Vote.class,"restaurant","user");
 
     public static final Vote VOTE_A1=new Vote(10004,10000,10002, LocalDateTime.of(2020,1,30,10,0));
     public static final Vote VOTE_A2=new Vote(10005,10000,10002, LocalDateTime.of(2020,1,29,10,0));
     public static final Vote VOTE_U1=new Vote(10006,10001,10003, LocalDateTime.of(2020,1,30,10,0));
     public static final Vote VOTE_U2=new Vote(10007,10001,10003, LocalDateTime.of(2020,1,29,10,0));
+    public static final Vote VOTE_A3=new Vote(10016,10000,10003, LocalDateTime.now());
 
+    public static final List<Vote>VOTE_LIST_A1=List.of(VOTE_A3);
     public static final List<Vote>VOTE_LIST_L=List.of(VOTE_A1,VOTE_A2);
     public static final List<Vote>VOTE_LIST_C=List.of(VOTE_U1,VOTE_U2);
 

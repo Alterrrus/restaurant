@@ -13,5 +13,7 @@ public interface UserRepo {
 
     boolean delete(Integer id);
 
+    User getByEmail(String email);
+
 
 }

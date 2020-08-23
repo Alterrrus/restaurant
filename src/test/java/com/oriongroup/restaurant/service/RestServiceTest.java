@@ -54,7 +54,8 @@ class RestServiceTest extends AbstractServiceTest{
     void update() throws Exception {
         Restaurant updated = new Restaurant(REST_L);
         updated.setName("updated");
-        service.update(updated);
+
+        service.update(updated,updated.id());
         REST_TEST_MATCHER.assertMatch(service.get(10002), updated);
     }
 

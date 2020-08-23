@@ -8,6 +8,7 @@ import com.oriongroup.restaurant.repository.extendDataJpa.VoteJPA;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.List;
 @Repository
 public class VoteJpaImpl implements VoteRepo {
@@ -42,9 +43,14 @@ public class VoteJpaImpl implements VoteRepo {
                 .filter(vote -> vote.getRestaurant().getId()==restaurantId&&vote.getUser().getId()==userId)
                 .orElse(null);
     }
+    @Override
+    public List<Vote> getByTimeExist(int userId, LocalDateTime startDate,LocalDateTime endTime){
+        return voteJPA.getByTimeExist(userId,startDate,endTime);
+    }
 
     @Override
     public boolean delete(int id,int restaurantId,int userId) {
         return voteJPA.delete(id,restaurantId,userId)!=0;
     }
+
 }

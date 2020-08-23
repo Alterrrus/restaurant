@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.List;
 @Transactional(readOnly = true)
 public interface VoteJPA extends JpaRepository<Vote,Integer> {
@@ -17,6 +18,9 @@ public interface VoteJPA extends JpaRepository<Vote,Integer> {
 
     @Query("SELECT v FROM Vote v WHERE v.restaurant.id=:restaurantId")
     List<Vote> getAll(@Param("restaurantId") int restaurantId);
+
+    @Query("SELECT v FROM Vote v WHERE v.user.id=:userId AND v.timeExist>=:startDate AND v.timeExist<:endTime")
+    List<Vote> getByTimeExist(@Param("userId") int userId, @Param("startDate")LocalDateTime startDate,@Param("endTime") LocalDateTime endTime);
 
 
 
