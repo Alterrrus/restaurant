@@ -16,7 +16,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/admin/restaurants", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/rest/admin/restaurants", produces = MediaType.APPLICATION_JSON_VALUE)
 public class AdminRestaurantController {
     private final RestService service;
     private final DishService dishService;
@@ -28,16 +28,6 @@ public class AdminRestaurantController {
         this.dishService = dishService;
         this.voteService = voteService;
     }
-
-
-  /*  @GetMapping
-    public List<Restaurant>getAll(){
-        return service.getAll();
-    }*/
-  /*  @GetMapping
-    public List<Restaurant>getAllWithDish(){
-        return service.findAllWithDishList();
-    }*/
 
     @GetMapping()
     public List<Restaurant> getAllRestaurantWithDishAndVote() {
@@ -64,7 +54,7 @@ public class AdminRestaurantController {
     public ResponseEntity<Restaurant> addRestaurant(@RequestBody Restaurant restaurant) {
         Restaurant created = service.create(restaurant);
         URI uriOfNewResource = ServletUriComponentsBuilder.fromCurrentContextPath()
-                .path("/admin/restaurants" + "/{id}")
+                .path("/rest/admin/restaurants" + "/{id}")
                 .buildAndExpand(created.getId()).toUri();
         return ResponseEntity.created(uriOfNewResource).body(created);
     }
@@ -86,7 +76,7 @@ public class AdminRestaurantController {
     public ResponseEntity<Dish> addDish(@RequestBody Dish dish, @PathVariable int restaurantId) {
         Dish created = dishService.create(dish, restaurantId);
         URI uriOfNewResource = ServletUriComponentsBuilder.fromCurrentContextPath()
-                .path("/admin/restaurants/" + restaurantId + "/dishes" + "/{id}")
+                .path("/rest/admin/restaurants/" + restaurantId + "/dishes" + "/{id}")
                 .buildAndExpand(created.getId()).toUri();
         return ResponseEntity.created(uriOfNewResource).body(created);
     }
@@ -96,6 +86,11 @@ public class AdminRestaurantController {
         return voteService.getAll(restaurantId);
     }
 
+    @DeleteMapping("/{restaurantId}/dishes/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable int id, @PathVariable int restaurantId) {
+        dishService.delete(id,restaurantId);
+    }
 
 
 }

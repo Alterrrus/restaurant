@@ -2,6 +2,7 @@ package com.oriongroup.restaurant.service;
 
 import com.oriongroup.restaurant.model.Vote;
 import com.oriongroup.restaurant.repository.JPA.VoteRepo;
+import com.oriongroup.restaurant.web.SecurityUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -34,7 +35,8 @@ public class VoteService extends AbstractService {
 
     }
 
-    public Vote save(int restaurantId, int userId) {
+    public Vote save(int restaurantId) {
+        int userId= SecurityUtil.authUserId();
         List<Vote> voteForDay=getByTimeExist(userId);
         log.info("voteForDay:"+voteForDay.toString());
         LocalDate dateTime = LocalDate.now();

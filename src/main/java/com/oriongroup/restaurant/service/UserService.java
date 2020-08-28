@@ -4,6 +4,8 @@ package com.oriongroup.restaurant.service;
 import com.oriongroup.restaurant.AuthorizedUser;
 import com.oriongroup.restaurant.model.User;
 import com.oriongroup.restaurant.repository.JPA.UserRepo;
+import com.oriongroup.restaurant.to.UserTo;
+import com.oriongroup.restaurant.util.UserUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Scope;
@@ -18,6 +20,7 @@ import org.springframework.util.Assert;
 import java.util.List;
 
 import static com.oriongroup.restaurant.util.UserUtil.prepareToSave;
+import static com.oriongroup.restaurant.util.ValidationUtil.checkNotFound;
 import static com.oriongroup.restaurant.util.ValidationUtil.checkNotFoundWithId;
 @Service("userService")
 @Scope(proxyMode = ScopedProxyMode.TARGET_CLASS)
@@ -35,12 +38,7 @@ public class UserService implements UserDetailsService {
         return userRepo.save(prepareToSave(user, passwordEncoder));
     }
 
-    @Transactional
-    public void enable(int id, boolean enabled) {
-        User user = get(id);
-        user.setEnabled(enabled);
-        userRepo.save(user);  // !! need only for JDBC implementation
-    }
+
     @Override
     public AuthorizedUser loadUserByUsername(String email) throws UsernameNotFoundException {
         User user = userRepo.getByEmail(email.toLowerCase());
@@ -52,9 +50,8 @@ public class UserService implements UserDetailsService {
 
     public List<User> getAll(){
         log.info("getAll");
-        List<User> u=userRepo.getAll();
-        u.forEach(a->log.info("id:"+a.id()+" role:"+a.getRoles().toString()));
-        return u;
+        return userRepo.getAll();
+
     }
 
     public User get(Integer id){
@@ -64,19 +61,30 @@ public class UserService implements UserDetailsService {
 
     public User create(User user){
         log.info("create");
-        Assert.notNull(user,"user must not be null");
-        return userRepo.save(user);
+        Assert.notNull(user, "user must not be null");
+        return prepareAndSave(user);
     }
 
     public void update(User user){
         log.info("update");
         Assert.notNull(user,"restaurant must not be null");
-        checkNotFoundWithId(userRepo.save(user),user.id());
+        //checkNotFoundWithId(userRepo.save(user),user.id());
+        prepareAndSave(user);
         log.info(user.getClass().getSimpleName()+":name:"+user.getName());
+    }
+
+    @Transactional
+    public void update(UserTo userTo) {
+        User user = get(userTo.id());
+        prepareAndSave(UserUtil.updateFromTo(user, userTo));   // !! need only for JDBC implementation
     }
 
     public void delete( int id){
         log.info("delete");
         checkNotFoundWithId(userRepo.delete(id),id);
+    }
+    public User getByEmail(String email) {
+        Assert.notNull(email, "email must not be null");
+        return checkNotFound(userRepo.getByEmail(email), "email=" + email);
     }
 }

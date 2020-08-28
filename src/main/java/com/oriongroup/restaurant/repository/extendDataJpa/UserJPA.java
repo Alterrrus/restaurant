@@ -16,8 +16,8 @@ public interface UserJPA extends JpaRepository<User,Integer> {
     @Modifying
     @Query("DELETE FROM User u WHERE u.id=:id")
     int delete(@Param("id") int id);
-
-    User getByEmail(String email);
+    @Query("select u FROM User u LEFT JOIN FETCH u.roles WHERE u.email=:email")
+    User getByEmail(@Param("email") String email);
 
 
 }

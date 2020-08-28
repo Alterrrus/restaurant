@@ -1,30 +1,48 @@
 package com.oriongroup.restaurant.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.oriongroup.restaurant.View;
 import org.hibernate.annotations.BatchSize;
+import org.hibernate.validator.constraints.SafeHtml;
 import org.springframework.util.CollectionUtils;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.*;
+
+import static org.hibernate.validator.constraints.SafeHtml.WhiteListType.NONE;
+
 //@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 @Entity
 @Table(name = "users")
 public class User extends AbstractBaseEntity{
 
-
+    @NotBlank
+    @Size(min = 2, max = 100)
     @Column(name = "name",nullable = false)
+    @SafeHtml(groups = {View.Web.class}, whitelistType = NONE)
     private String name;
+
     @Column(name = "email",unique = true,nullable = false)
+    @Email
+    @NotBlank
+    @Size(max = 100)
+    @SafeHtml(groups = {View.Web.class}, whitelistType = NONE)
     private String email;
+
     @Column(name = "password", nullable = false)
     @NotBlank
-   // @Size(min = 5, max = 100)
+    // @Size(min = 5, max = 100)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
     @Column(name = "enabled", nullable = false, columnDefinition = "bool default true")
     private boolean enabled = true;
     @Column(name = "registered", nullable = false, columnDefinition = "timestamp default now()")
     @NotNull
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Date registered = new Date();
     //@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     @Enumerated(EnumType.STRING)

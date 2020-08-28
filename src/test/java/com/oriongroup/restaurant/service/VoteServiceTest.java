@@ -38,7 +38,7 @@ class VoteServiceTest extends AbstractServiceTest {
     }
     @Test
     public void save(){
-        Vote vote=voteService.save(10003,10000);
+        Vote vote=voteService.save(10003);
         //если голосовал сегодня-вернуть или голос из базы (если после 11)
         //или вернуть голос с тем же id но новым временем (апдейт)
         //если не голосовал сегодня - вернуть новый голос (новый id, новое время)
