@@ -20,17 +20,10 @@ http://www.springframework.org/schema/data/jpa
 
 <!-- Change DB by comment/uncomment property-placeholder -->
 
-    <!--<context:property-placeholder location="classpath:db/hsqldb.properties" system-properties-mode="OVERRIDE"/>-->
+
   <context:property-placeholder location="classpath:db/hsqldb.properties" system-properties-mode="OVERRIDE"/>
 
-<!--
-    For postgres driver logging
-    It uses java.util.logging and logged via jul-to-slf4j bridge
-    https://stackoverflow.com/a/27296470/548473
--->
-  <!--  <bean class="org.springframework.beans.factory.config.MethodInvokingBean">
-        <property name="staticMethod" value="org.slf4j.bridge.SLF4JBridgeHandler.install" />
-    </bean>-->
+
     <jpa:repositories base-package="com.oriongroup.restaurant.**.repository" />
     <context:component-scan base-package="com.oriongroup.restaurant.**.repository"/>
 
@@ -51,7 +44,7 @@ http://www.springframework.org/schema/data/jpa
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
           p:dataSource-ref="dataSource"
           p:packagesToScan="com.oriongroup.**.model">
-        <!--p:persistenceUnitName="persistenceUnit">-->
+
 
         <property name="jpaPropertyMap">
             <map>
@@ -81,14 +74,5 @@ http://www.springframework.org/schema/data/jpa
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"
           p:entityManagerFactory-ref="entityManagerFactory"/>
 
-    <!--
-        <context:component-scan base-package="ru.javawebinar.**.repository.jdbc"/>
-        <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
-            <constructor-arg ref="dataSource"/>
-        </bean>
 
-        <bean id="namedJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
-            <constructor-arg ref="jdbcTemplate"/>
-        </bean>
-    -->
 </beans>

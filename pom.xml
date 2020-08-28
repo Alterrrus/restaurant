@@ -144,9 +144,8 @@
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
-        <!-- Webjars (static dependencies distributed as JAR files) -->
 
-        <!-- Spring -->
+
         <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>

@@ -1,5 +1,7 @@
 package com.oriongroup.restaurant.web;
 
+import com.oriongroup.restaurant.model.Dish;
+import com.oriongroup.restaurant.model.Restaurant;
 import com.oriongroup.restaurant.model.Vote;
 import com.oriongroup.restaurant.service.DishService;
 import com.oriongroup.restaurant.service.RestService;
@@ -37,4 +39,18 @@ public class RestaurantController {
     @GetMapping(value = "/{restaurantId}/votes")
     public List<Vote> getAllRestaurantVote(@PathVariable int restaurantId) {
         return voteService.getAll(restaurantId);}
+
+    @GetMapping()
+    public List<Restaurant> getAllRestaurantWithDishAndVote() {
+        return restService.findAllWithDishAndVote();
+    }
+    @GetMapping("/{id}")
+    public Restaurant getRestaurant(@PathVariable int id) {
+        return restService.get(id);
+    }
+    @GetMapping(value = "/{restaurantId}/dishes")
+    public List<Dish> getAllRestaurantDish(@PathVariable int restaurantId) {
+        return dishService.getAll(restaurantId);
+    }
+
 }
