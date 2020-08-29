@@ -30,11 +30,12 @@ public class RestaurantController {
 
     @PutMapping(value = "/{restaurantId}/votes")
     public ResponseEntity<Vote> addVote(@PathVariable int restaurantId) {
-        Vote created = voteService.save(restaurantId);
+         Vote created=voteService.save(restaurantId);
         URI uriOfNewResource = ServletUriComponentsBuilder.fromCurrentContextPath()
-                .path("/rest/restaurants/" + restaurantId + "/votes/"+created.id())
+                .path("/rest/restaurants/" + restaurantId + "/votes" + "/{id}")
                 .buildAndExpand(created.getId()).toUri();
         return ResponseEntity.created(uriOfNewResource).body(created);
+
     }
     @GetMapping(value = "/{restaurantId}/votes")
     public List<Vote> getAllRestaurantVote(@PathVariable int restaurantId) {

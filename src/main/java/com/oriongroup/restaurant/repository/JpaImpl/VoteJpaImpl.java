@@ -8,6 +8,7 @@ import com.oriongroup.restaurant.repository.extendDataJpa.VoteJPA;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 @Repository
@@ -29,10 +30,12 @@ public class VoteJpaImpl implements VoteRepo {
 
     @Override
     @Transactional
-    public Vote save(Vote vote, int restaurantId, int userId) {
-        if (!vote.isNew()&&get(vote.getId(),restaurantId,userId)==null ){return null;}
+    public Vote save(Vote vote,int userId,int restaurantId) {
+/*      if (!vote.isNew()&&get(vote.getId(),restaurantId,userId)==null ){
+           return null;}*/
         vote.setRestaurant(restaurantJPA.getOne(restaurantId));
         vote.setUser(userJPA.getOne(userId));
+
 
         return voteJPA.save(vote);
     }
@@ -49,8 +52,23 @@ public class VoteJpaImpl implements VoteRepo {
     }
 
     @Override
+    public void update(int restaurantId, int id, int userId) {
+        voteJPA.update(restaurantId,id,userId);
+    }
+
+    @Override
+    public Vote getByTimeToDay(int userId) {
+        List<Vote>l=voteJPA.getByTimeToDay(userId);
+        return l.stream()
+                .filter(v-> v.getTimeExist().toLocalDate().equals(LocalDate.now()))
+                .findFirst().orElse(null);
+
+    }
+
+    @Override
     public boolean delete(int id,int restaurantId,int userId) {
         return voteJPA.delete(id,restaurantId,userId)!=0;
     }
+
 
 }

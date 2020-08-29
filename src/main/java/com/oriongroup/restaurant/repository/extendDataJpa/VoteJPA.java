@@ -13,6 +13,12 @@ import java.util.List;
 public interface VoteJPA extends JpaRepository<Vote,Integer> {
     @Modifying
     @Transactional
+    @Query("UPDATE  Vote v SET v.restaurant.id=:restaurantId WHERE v.id=:id AND v.user.id=:userId")
+    void update(@Param("restaurantId") int restaurantId,@Param("id") int id, @Param("userId") int userId);
+
+
+    @Modifying
+    @Transactional
     @Query("DELETE FROM Vote v WHERE v.id=:id AND v.restaurant.id=:restaurantId AND v.user.id=:userId")
     int delete(@Param("id") int id, @Param("restaurantId") int restaurantId, @Param("userId") int userId);
 
@@ -22,6 +28,7 @@ public interface VoteJPA extends JpaRepository<Vote,Integer> {
     @Query("SELECT v FROM Vote v WHERE v.user.id=:userId AND v.timeExist>=:startDate AND v.timeExist<:endTime")
     List<Vote> getByTimeExist(@Param("userId") int userId, @Param("startDate")LocalDateTime startDate,@Param("endTime") LocalDateTime endTime);
 
-
+    @Query("SELECT v FROM Vote v WHERE v.user.id=:userId")
+    List<Vote> getByTimeToDay(@Param("userId") int userId);
 
 }

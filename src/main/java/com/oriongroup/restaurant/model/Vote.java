@@ -26,7 +26,7 @@ public class Vote extends AbstractBaseEntity{
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "userId",nullable = false,referencedColumnName = "id")
-
+    @JsonBackReference(value = "voteList1")
     private User user;
 
     public Vote(){}
@@ -48,6 +48,8 @@ public class Vote extends AbstractBaseEntity{
         this.userId = userId;
         this.timeExist=timeExist;
     }
+
+
 
     public Integer getRestaurantId() {
         return restaurantId;

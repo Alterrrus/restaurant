@@ -1,5 +1,6 @@
 package com.oriongroup.restaurant.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.oriongroup.restaurant.View;
 import org.hibernate.annotations.BatchSize;
@@ -54,7 +55,7 @@ public class User extends AbstractBaseEntity{
     private Set<Role> roles;
 
     @OneToMany(mappedBy = "user",fetch = FetchType.LAZY)
-
+    @JsonManagedReference(value = "voteList1")
     private List<Vote> voteList;
 
     public void setVoteList(List<Vote> voteList) {

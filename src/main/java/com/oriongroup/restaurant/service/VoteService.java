@@ -11,7 +11,6 @@ import java.time.LocalDate;
 import java.util.List;
 
 import static com.oriongroup.restaurant.util.ValidationUtil.checkNotFoundWithId;
-
 @Service
 public class VoteService extends AbstractService {
     protected final Logger log = LoggerFactory.getLogger(getClass());
@@ -37,27 +36,18 @@ public class VoteService extends AbstractService {
 
     public Vote save(int restaurantId) {
         int userId= SecurityUtil.authUserId();
-        List<Vote> voteForDay=getByTimeExist(userId);
-        log.info("voteForDay:"+voteForDay.toString());
-        LocalDate dateTime = LocalDate.now();
-        Vote newVote=new Vote(userId,restaurantId);
-        log.info("newVote:"+newVote.toString());
-        if (voteForDay.size()==0){
-            Vote v=voteRepo.save(newVote,restaurantId,userId);
-            log.info("если не голосовал:"+v.toString()+" "+v.getTimeExist().toString());
-            return v;}else
+        Vote base=voteRepo.getByTimeToDay(userId);
 
-        if (voteForDay.size()==1){
-            Vote vote=voteForDay.get(0);
-            log.info("если голосовал:"+vote.toString()+" "+ vote.getTimeExist().toString());
-            Vote v1;
-        if (vote.getTimeExist().isAfter(dateTime.atStartOfDay())
-                &&vote.getTimeExist().isBefore(dateTime.atTime(11,0,0,0))){
-            v1=voteRepo.save(vote,restaurantId,userId);
-            log.info("если голосуешь до 11:"+v1.toString()+" "+v1.getTimeExist().toString());
-            return v1;}}
-        log.info("если голосуешь после 11:"+voteForDay.get(0).toString()+" "+voteForDay.get(0).getTimeExist().toString());
-        return voteForDay.get(0);
+        if(base==null){return voteRepo.save(new Vote(userId,restaurantId),userId,restaurantId);}
+        else
+            if(base.getTimeExist().isAfter(LocalDate.now().atStartOfDay())
+                    &&base.getTimeExist().isBefore(LocalDate.now().atTime(11,00,00))){
+               voteRepo.update(restaurantId,base.id(),userId);
+               return voteRepo.getByTimeToDay(userId);
+            }
+            else
+                //checkNotFound(null,"сменить ваше нешение можно с 00 до 11");
+                return base;
     }
 
     public List<Vote> getAll(int restaurantId) {
