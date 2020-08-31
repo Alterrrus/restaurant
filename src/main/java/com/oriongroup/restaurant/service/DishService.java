@@ -36,14 +36,14 @@ public class DishService extends AbstractService {
     }
 
     public void update(Dish dish, int restaurantId,int id) {
-        log.info("UPDATE");
+        log.info("UPDATE dish");
         ValidationUtil.assureIdConsistent(dish,id);
         Assert.notNull(dish, "dish must not be null");
         checkNotFoundWithId(dishRepo.save(dish, restaurantId), dish.id());
     }
 
     public Dish create(Dish dish, int restaurantId) {
-        log.info("CREATE");
+        log.info("CREATE dish");
         ValidationUtil.checkNew(dish);
         Assert.notNull(dish, "dish must not be null");
         return dishRepo.save(dish, restaurantId);

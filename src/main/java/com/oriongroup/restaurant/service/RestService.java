@@ -42,11 +42,6 @@ public class RestService {
     }
 
     public List<Restaurant> findAllWithDishList(){
-        log.info("findAllWithDishList");
-
-       /* r.forEach(a->{
-            log.info(a.getName()+"\n"+"-----------------------");
-            a.getDishList().forEach(z->log.info(z.getName()));});*/
         return restRepo.findAllWithDishListByIdNotNull();}
 
     public List<Restaurant>findAllWithDishAndVote(){
@@ -61,19 +56,19 @@ public class RestService {
         }
 
         public Restaurant create(Restaurant restaurant){
-            log.info("create");
+            log.info("create new restaurant");
             Assert.notNull(restaurant,"restaurant must not be null");
             return restRepo.save(restaurant);
         }
         public void update(Restaurant restaurant,int id){
-            log.info("update");
+            log.info("update restaurant");
             ValidationUtil.assureIdConsistent(restaurant,id);
             Assert.notNull(restaurant,"restaurant must not be null");
             checkNotFoundWithId(restRepo.save(restaurant),restaurant.id());
             log.info(restaurant.getClass().getSimpleName()+":name:"+restaurant.getName());
         }
         public void delete( int id){
-            log.info("delete");
+            log.info("delete restaurant");
         checkNotFoundWithId(restRepo.delete(id),id);
         }
 

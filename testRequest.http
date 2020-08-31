@@ -124,7 +124,7 @@ Authorization: Basic admin@gmail.com admin
 
 ### curl  -i -X PUT http://localhost:8080/restaurant/rest/restaurants/10002/votes --user user@gmail.com:user
 ###addVote(User)
-PUT http://localhost:8080/restaurant/rest/restaurants/10002/votes
+PUT http://localhost:8080/restaurant/rest/restaurants/10003/votes
 Authorization: Basic user@gmail.com user
 
 ###

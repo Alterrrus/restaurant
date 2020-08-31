@@ -60,13 +60,13 @@ public class UserService implements UserDetailsService {
     }
 
     public User create(User user){
-        log.info("create");
+        log.info("create user");
         Assert.notNull(user, "user must not be null");
         return prepareAndSave(user);
     }
 
     public void update(User user){
-        log.info("update");
+        log.info("update user");
         Assert.notNull(user,"restaurant must not be null");
         //checkNotFoundWithId(userRepo.save(user),user.id());
         prepareAndSave(user);
@@ -80,7 +80,7 @@ public class UserService implements UserDetailsService {
     }
 
     public void delete( int id){
-        log.info("delete");
+        log.info("delete user");
         checkNotFoundWithId(userRepo.delete(id),id);
     }
     public User getByEmail(String email) {

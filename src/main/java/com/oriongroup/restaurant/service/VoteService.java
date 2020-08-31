@@ -38,14 +38,23 @@ public class VoteService extends AbstractService {
         int userId= SecurityUtil.authUserId();
         Vote base=voteRepo.getByTimeToDay(userId);
 
-        if(base==null){return voteRepo.save(new Vote(userId,restaurantId),userId,restaurantId);}
+        if(base==null){
+            Vote v=voteRepo.save(new Vote(userId,restaurantId),userId,restaurantId);
+            log.info("new vote created "+ "id: "+v.id()+"\n"+"restaurantId: "+v.getRestaurantId()+
+                    "\n"+"userId: "+v.getUserId());
+            return v;}
         else
             if(base.getTimeExist().isAfter(LocalDate.now().atStartOfDay())
                     &&base.getTimeExist().isBefore(LocalDate.now().atTime(11,00,00))){
                voteRepo.update(restaurantId,base.id(),userId);
-               return voteRepo.getByTimeToDay(userId);
+               Vote v1=voteRepo.getByTimeToDay(userId);
+                log.info("vote updated "+ "id: "+v1.id()+"\n"+"restaurantId: "+v1.getRestaurantId()+
+                        "\n"+"userId: "+v1.getUserId());
+               return v1;
             }
             else
+                log.info("voting is not possible "+ "id: "+base.id()+"\n"+"restaurantId: "+base.getRestaurantId()+
+                        "\n"+"userId: "+base.getUserId());
                 //checkNotFound(null,"сменить ваше нешение можно с 00 до 11");
                 return base;
     }

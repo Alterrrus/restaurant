@@ -45,6 +45,7 @@ public class RestaurantController {
     public List<Restaurant> getAllRestaurantWithDishAndVote() {
         return restService.findAllWithDishAndVote();
     }
+
     @GetMapping("/{id}")
     public Restaurant getRestaurant(@PathVariable int id) {
         return restService.get(id);
