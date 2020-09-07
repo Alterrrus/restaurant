@@ -60,7 +60,7 @@ POST http://localhost:8080/restaurant/rest/admin/restaurants/10002/dishes
 Authorization: Basic admin@gmail.com admin
 Content-Type: application/json;charset=UTF-8
 
-{"name":"New Sou","price":"1001"}
+{"name":"New Sou","price":"01001.20"}
 
 ###
 

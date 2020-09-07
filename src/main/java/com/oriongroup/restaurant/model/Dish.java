@@ -6,6 +6,7 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 @Entity
@@ -16,6 +17,7 @@ public class Dish extends AbstractBaseEntity {
     private String name;
     @Column(name = "price")
     @NotNull
+    @Digits(integer = 5,fraction = 2)
     private BigDecimal price;
 
     @ManyToOne(fetch = FetchType.LAZY)

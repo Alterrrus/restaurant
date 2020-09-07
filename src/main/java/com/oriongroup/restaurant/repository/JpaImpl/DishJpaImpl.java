@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+
 @Repository
 public class DishJpaImpl implements DishRepo {
 
@@ -18,7 +19,6 @@ public class DishJpaImpl implements DishRepo {
         this.dishJPA = dishJPA;
         this.restaurantJPA = restaurantJPA;
     }
-
 
     @Override
     public List<Dish> getAll(Integer restaurantId) {
