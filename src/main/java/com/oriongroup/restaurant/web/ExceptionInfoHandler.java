@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Arrays;
 import java.util.Map;
 
 import static com.oriongroup.restaurant.util.exception.ErrorType.*;
@@ -51,7 +52,7 @@ public class ExceptionInfoHandler {
     @ExceptionHandler(ApplicationException.class)
     public ResponseEntity<ErrorInfo> applicationError(HttpServletRequest req, ApplicationException appEx) {
         ErrorInfo errorInfo = logAndGetErrorInfo(req, appEx, false, appEx.getType(),
-                messageSourceAccessor.getMessage(appEx.getMsgCode(), appEx.getArgs()));
+                messageSourceAccessor.getMessage(appEx.getMsgCode(), appEx.getArgs()), Arrays.toString(appEx.getArgs()));
         return ResponseEntity.status(appEx.getType().getStatus()).body(errorInfo);
     }
 

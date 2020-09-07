@@ -5,6 +5,7 @@ import com.oriongroup.restaurant.util.DateTimeUtil;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 @NamedQuery(name = "getByTimeExist",query = "SELECT v FROM Vote v WHERE v.user.id=:userId AND v.timeExist>=: startDate AND v.timeExist<: endTime")
 @Entity
@@ -16,6 +17,7 @@ public class Vote extends AbstractBaseEntity{
     private Integer userId;
 
     @Column(name = "timeExist",nullable = false)
+    @NotNull
     @DateTimeFormat(pattern = DateTimeUtil.DATE_TIME_PATTERN)
     private LocalDateTime timeExist=LocalDateTime.now();
 

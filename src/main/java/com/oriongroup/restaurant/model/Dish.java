@@ -2,21 +2,30 @@ package com.oriongroup.restaurant.model;
 
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.oriongroup.restaurant.View;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
+import org.hibernate.validator.constraints.SafeHtml;
 
 import javax.persistence.*;
-import javax.validation.constraints.Digits;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 import java.math.BigDecimal;
+
+import static org.hibernate.validator.constraints.SafeHtml.WhiteListType.NONE;
+
 @Entity
 @Table(name = "dish")
 public class Dish extends AbstractBaseEntity {
-    @Column(name = "name")
-    @NotNull
+
+    @NotBlank
+    @Size(min = 2,max = 100)
+    @Column(name = "name",nullable = false)
+    @SafeHtml(groups = {View.Web.class}, whitelistType = NONE)
     private String name;
     @Column(name = "price")
     @NotNull
+    @DecimalMin(value = "0.0",inclusive = false)
+    @DecimalMax(value = "99999.99",inclusive = true)
     @Digits(integer = 5,fraction = 2)
     private BigDecimal price;
 

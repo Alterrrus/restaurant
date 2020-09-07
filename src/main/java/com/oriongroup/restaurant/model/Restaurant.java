@@ -1,16 +1,23 @@
 package com.oriongroup.restaurant.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.oriongroup.restaurant.View;
+import org.hibernate.validator.constraints.SafeHtml;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.List;
+
+import static org.hibernate.validator.constraints.SafeHtml.WhiteListType.NONE;
 
 @Entity
 @Table(name = "restaurant")
 public class Restaurant extends AbstractBaseEntity{
-    @Column(name = "name")
-    @NotNull
+    @NotBlank
+    @Size(min = 2,max = 100)
+    @Column(name = "name",nullable = false)
+    @SafeHtml(groups = {View.Web.class}, whitelistType = NONE)
     private String name;
 
 

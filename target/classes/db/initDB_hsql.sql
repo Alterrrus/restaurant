@@ -51,3 +51,4 @@ CREATE TABLE dish
 
     FOREIGN KEY (restaurantId) REFERENCES restaurant (id) ON DELETE CASCADE
 );
+CREATE UNIQUE INDEX restaurant_unique_name_dish_idx ON dish (restaurantId, name);
