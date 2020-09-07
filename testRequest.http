@@ -131,7 +131,7 @@ Authorization: Basic user@gmail.com user
 
 ### curl  -H 'Content-Type:application/json;charset=UTF-8' http://localhost:8080/restaurant/rest/restaurants/10002/votes --user user@gmail.com:user
 ###getAllRestaurantVotes(User)
-GET http://localhost:8080/restaurant/rest/restaurants/10002/votes
+GET http://localhost:8080/restaurant/rest/restaurants/10003/votes
 Authorization: Basic user@gmail.com user
 Content-Type: application/json;charset=UTF-8
 

@@ -2,6 +2,7 @@ package com.oriongroup.restaurant.service;
 
 import com.oriongroup.restaurant.model.Vote;
 import com.oriongroup.restaurant.repository.JPA.VoteRepo;
+import com.oriongroup.restaurant.util.exception.DoubleVoteException;
 import com.oriongroup.restaurant.web.SecurityUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -52,11 +53,11 @@ public class VoteService extends AbstractService {
                         "\n"+"userId: "+v1.getUserId());
                return v1;
             }
-            else
-                log.info("voting is not possible "+ "id: "+base.id()+"\n"+"restaurantId: "+base.getRestaurantId()+
+            else throw new DoubleVoteException("can not update vote id:" +base.id());
+               /* log.info("voting is not possible "+ "id: "+base.id()+"\n"+"restaurantId: "+base.getRestaurantId()+
                         "\n"+"userId: "+base.getUserId());
                 //checkNotFound(null,"сменить ваше нешение можно с 00 до 11");
-                return base;
+                return base;*/
     }
 
     public List<Vote> getAll(int restaurantId) {
